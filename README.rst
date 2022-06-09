@@ -1,5 +1,6 @@
 A little context time counter.
 Use it as:
+
 ```py
 with ContextTimeCounter() as ctc:
     # ...
