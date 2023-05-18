@@ -1,4 +1,4 @@
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 import time
 
@@ -7,9 +7,14 @@ class ContextTimeCounter:
     A little context time counter.
     Use it as:
     ```py
+    from contexttimecounter import ContextTimeCounter
+
     with ContextTimeCounter() as ctc:
         # ...
     print(f"Time spent in the context: {ctc.time_total:.4f}")
+
+    NOTE:
+    This code will not measure time properly in case of async functions [eg.: functions that have to be `await`'ed]
     ```
     """
 
